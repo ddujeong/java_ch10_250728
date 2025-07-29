@@ -10,10 +10,10 @@ public class Test03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int num;
-		try (Scanner scanner = new Scanner(System.in)) {
+		Scanner scanner = new Scanner(System.in);
 			System.out.print("정수를 입력하세요 : ");
 			num = scanner.nextInt();
-			if (num % 2 ==0) {
+		try {	if (num % 2 ==0) {
 				System.out.println("짝수!");
 			} else {
 				System.out.println("홀수!");
@@ -22,7 +22,7 @@ public class Test03 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("정수가 아닙니다!");}
-			
+			scanner.close();
 	}
 	}
 

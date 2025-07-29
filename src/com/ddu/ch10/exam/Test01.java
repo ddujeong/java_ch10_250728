@@ -8,19 +8,21 @@ import java.util.Scanner;
 public class Test01 {
 
 	public static void main(String[] args) {
-		try (// TODO Auto-generated method stub
-		Scanner scanner = new Scanner(System.in)) {
+	
+		Scanner scanner = new Scanner(System.in);
 			int a;
 			int b;
 			System.out.print("첫번쩨 정수를 입력하세요 : ");
-			a = scanner.nextInt();
+		try{ a = scanner.nextInt();
 			System.out.print("두번째 정수를 입력하세요 : ");
 			b = scanner.nextInt();
 			double divid = (double)a / b;
 			System.out.println(divid);
-		} catch (Exception e){
+			} catch (Exception e){
 			System.out.println("모든 수는 0으로 나눌 수 없습니다");
-		}
+		}scanner.close();
 	}
 
 }
+// try 시작점 조정
+	

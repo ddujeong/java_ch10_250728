@@ -8,19 +8,20 @@ public class Test02 {
 
 	
 	public static void main(String[] args) {
-		try (// TODO Auto-generated method stub
-		Scanner scanner = new Scanner(System.in)) {
+	
+		Scanner scanner = new Scanner(System.in);
 			System.out.println("문자열을 입력하세요 : ");
 			String num = scanner.nextLine();
-			try {
-				for(int i = 0; i< num.length(); i++);
-				System.out.println(num.length());
-			} catch (NumberFormatException e) {
+		try {
+			if (num.trim().isEmpty()) {
+				System.out.println("입력된 문자열이 없습니다");
+				}else {
+				System.out.println(num.length());}
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				System.out.println("문자열이 아닙니다!");
 				e.printStackTrace();
-			}
+			}scanner.close();
 		}
 		}
-}
-// 미완성
+
